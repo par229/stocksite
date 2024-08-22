@@ -1,0 +1,29 @@
+/**{
+    backdrop-filter: blur(10px);
+}*/
+
+#RegisterForm {
+    background-color: #000;
+}
+
+.check-required{
+    display: flex;
+    align-items: center;
+}
+
+.check-required .icon{
+    position: absolute;
+    right: 240px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+.check-required input,
+.check-required button{
+    margin-right: 5px;
+}
+
+.verify-email{
+    display: none;
+}
