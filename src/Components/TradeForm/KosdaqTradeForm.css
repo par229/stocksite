@@ -1,19 +1,18 @@
 .wrapper {
-    display: flex;
-    justify-content: space-between;
     padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
 .menu-bar {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
+    margin: 0 0 20px 0;
     background-color: #333;
+    overflow: hidden;
 }
 
 .menu-bar li {
-    margin-right: 10px;
+    float: left;
 }
 
 .menu-bar li a {
@@ -29,48 +28,50 @@
 }
 
 .trade-form {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
 }
 
-.input-group {
+.trade-form label {
+    margin: 10px 0 5px;
+}
+
+.trade-form input {
+    padding: 8px;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.input-group label {
-    margin-right: 10px;
-}
-
-.button-group button {
-    margin-right: 10px;
-    padding: 10px 15px;
-    background-color: #7047ce;
+.trade-form button {
+    padding: 10px;
+    background-color: #28a745;
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-.button-group button:hover {
-    background-color: #45a049;
+.trade-form button:hover {
+    background-color: #218838;
 }
 
-.trade-section {
-    flex: 1;
-    margin-right: 20px;
+.trade-buttons {
+    display: flex;
+    justify-content: space-between;
 }
 
-.kosdaq-status {
-    flex: 0.5;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+.trade-buttons button {
+    width: 48%;
+    background-color: #007bff;
 }
 
-.kosdaq-status h2 {
-    margin-bottom: 10px;
+.trade-buttons button.sell {
+    background-color: #dc3545;
 }
 
-.kosdaq-status p {
-    font-size: 1.5em;
-    font-weight: bold;
+.trade-buttons button.sell:hover {
+    background-color: #c82333;
 }
