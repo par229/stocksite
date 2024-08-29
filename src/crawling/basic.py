@@ -1,3 +1,31 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+# 브라우저 꺼짐 방지 옵션
+chrome_options = Options()
+chrome_options.add_experimental_option("detach", True)
+
+driver = webdriver.Chrome(options=chrome_options)
+
+# 웹페이지 해당 주소 이동
+driver.get("https://finance.naver.com/sise/")
+
+# 요소 로드를 기다림
+try:
+    # 'box_type_l' 클래스 이름을 가진 요소가 로드될 때까지 최대 10초 대기
+    element = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.CLASS_NAME, "box_type_l"))
+    )
+    print(element.text)  # 해당 요소의 텍스트 출력
+except Exception as e:
+    print("오류 발생:", e)
+
+
+
+
 # *가상환경으로 시작*
 # 1. requests 라이브러리 설치
 # pip install requests
