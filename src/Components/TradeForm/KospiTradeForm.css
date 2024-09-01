@@ -1,0 +1,77 @@
+.wrapper {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.menu-bar {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu-bar li {
+    float: left;
+}
+
+.menu-bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-bar li a:hover {
+    background-color: #111;
+}
+
+.trade-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.trade-form label {
+    margin: 10px 0 5px;
+}
+
+.trade-form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.trade-form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.trade-form button:hover {
+    background-color: #218838;
+}
+
+.trade-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trade-buttons button {
+    width: 48%;
+    background-color: #007bff;
+}
+
+.trade-buttons button.sell {
+    background-color: #dc3545;
+}
+
+.trade-buttons button.sell:hover {
+    background-color: #c82333;
+}
